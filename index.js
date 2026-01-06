@@ -35,7 +35,6 @@ async function run(model, msg) {
     });
 
     const data = await response.json();
-    console.log("Raw API response:", JSON.stringify(data, null, 2));
 
     if (!data.success) {
         throw new Error(data.errors?.[0]?.message || "Unknown API error");
